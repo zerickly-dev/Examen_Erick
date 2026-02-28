@@ -1,63 +1,53 @@
 <!doctype html>
 <html lang="en">
-    <html>
-        <head>
-            <meta charset="UTF-8" />
-            <meta
-                name="viewport"
-                content="width-device-width"
-                ,
-                initial-scale="1.0"
-            />
-            <title>News</title>
-            <link
-                href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-                rel="stylesheet"
-                integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-                crossorigin="anonymous"
-            />
-        </head>
-        <body>
-            <div class="container py-4">
-                <form id="newsForm" class="row g-3 mb-4">
-                    <div class="col-md-4">
-                        <label for="query" class="form-label">Buscar</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="query"
-                            placeholder="Palabra"
-                            required
-                        />
-                    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>News</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container py-4">
+            <h1 class="mb-4 text-center">Buscador de Noticias</h1>
+            <form id="newsForm" class="row g-3 mb-4">
+                <div class="col-md-4">
+                    <label for="query" class="form-label">Buscar</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="query"
+                        placeholder="Palabra clave"
+                        required
+                    />
+                </div>
+                <div class="col-md-3">
+                    <label for="from" class="form-label">Desde</label>
+                    <input type="date" class="form-control" id="from" />
+                </div>
+                <div class="col-md-3">
+                    <label for="to" class="form-label">Hasta</label>
+                    <input type="date" class="form-control" id="to" />
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100">
+                        Buscar
+                    </button>
+                </div>
+            </form>
+            <div id="alertContainer"></div>
+            <div id="results" class="row g-4"></div>
+        </div>
 
-                    <div class="col-md-3">
-                        <label for="from" class="form-label">Desde</label>
-                        <input type="date" class="form-control" id="from" />
-                    </div>
-
-                    <div class="col-md-3">
-                        <label for="to" class="form-label">Hasta</label>
-                        <input type="date" class="form-control" id="to" />
-                    </div>
-
-                    <div class="col-md-2 d-flex align-items-end">
-                        <button type="submit" class="btn btn-primary w-100">
-                            Buscar
-                        </button>
-                    </div>
-                </form>
-
-                <div id="alertContainer"></div>
-                <div id="results" class="row g-4"></div>
-            </div>
-
-            <script
-                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-                crossorigin="anonymous"
-            ></script>
-            <script src="app.js"></script>
-        </body>
-    </html>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <script src="app.js"></script>
+    </body>
 </html>
