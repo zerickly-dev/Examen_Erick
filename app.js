@@ -46,7 +46,8 @@ form.addEventListener("submit", async function (event) {
       if (noticia.urlToImage) {
         imagen = noticia.urlToImage;
       } else {
-        imagen = "https://via.placeholder.com/400x200?text=Sin+Imagen";
+        imagen = imagen =
+          "https://dummyimage.com/400x200/cccccc/000000&text=Sin+Imagen";
       }
 
       let titulo;
